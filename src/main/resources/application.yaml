@@ -1,0 +1,31 @@
+spring:
+  thymeleaf:
+      cache: false
+      prefix: classpath:/templates/
+      mode: LEGACYHTML5
+  activemq:
+        broker-url: tcp://localhost:61616
+        user: admin
+        password: admin
+  jms:
+        pub-sub-domain: true #为true时是topic模式，为false是queue模式
+  redis:
+      database: 0
+      host: 192.168.182.128
+      port: 6379
+      password: 123
+  solr:
+        host: http://localhost:8983/solr
+  main:
+    web-environment: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/webshop?characterEncoding=utf-8
+    name: datasource
+    username: root
+    password: 123
+    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 9999
+mybatis:
+  mapper-locations: classpath*:sqlmap/*.xml
